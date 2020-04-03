@@ -21,7 +21,7 @@ export default class TodosList extends Component {
   }
 
   componentDidMount(){
-    axios.get('http://locasl:4000/todos/')
+    axios.get('http://localhost:4000/todos/')
       .then(response => {
         this.setState({todos: response.data});
       })
@@ -50,7 +50,7 @@ export default class TodosList extends Component {
             </tr>
           </thead>
           <tbody>
-            { this.todosList() }
+            { this.todoList() }
           </tbody>
         </table>
       </div>
